@@ -19,7 +19,7 @@
 <meta property="og:description" content="1 下载icarus主题 进入本地博客主目录，点击鼠标右键Git Bash Here,进入命令行界面，输入  1git clone https://github.com/ppoffice/hexo-theme-icarus themes/icarus   打开themes文件夹，就会发现多了一个icarus文件夹，这就是主题的所有文件">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://www.52wufang.com/images/og_image.png">
-<meta property="og:updated_time" content="2020-02-26T18:37:58.997Z">
+<meta property="og:updated_time" content="2020-02-26T18:49:20.591Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用hexo+icarus搭建个人博客">
 <meta name="twitter:description" content="1 下载icarus主题 进入本地博客主目录，点击鼠标右键Git Bash Here,进入命令行界面，输入  1git clone https://github.com/ppoffice/hexo-theme-icarus themes/icarus   打开themes文件夹，就会发现多了一个icarus文件夹，这就是主题的所有文件">
@@ -158,7 +158,7 @@ var _hmt = _hmt || [];
                 <span class="level-item has-text-grey">
                     
                     
-                    16 分钟 读完 (大约 2354 个字)
+                    18 分钟 读完 (大约 2670 个字)
                 </span>
                 
                 
@@ -288,7 +288,49 @@ var _hmt = _hmt || [];
 <li>第二，本地博客所在目录下的 source 目录中（<strong>注意不要放错位置了</strong>），创建一个 CNAME 文件，编辑文件，内容就是你的域名,比如我的<code>52wufang.com</code>,然后执行 <code>hexo d</code> 命令将这个文件上传到 GitHub 就可以了。</li>
 </ul>
 <p>这样github仓库地址和域名就绑定在一起了，可以直接访问观察效果了</p>
-<h2 id="2-4-写文章"><a href="#2-4-写文章" class="headerlink" title="2.4 写文章"></a>2.4 写文章</h2><p>一般都是支持md语法的，使用好用的编辑器，注意语法就好</p>
+<h2 id="2-4-写文章"><a href="#2-4-写文章" class="headerlink" title="2.4 写文章"></a>2.4 写文章</h2><p>一般都是支持md语法的，使用好用的编辑器，注意语法就好，简单说下自己遇到的几个：</p>
+<ul>
+<li><p>设置图片路径问题，配置文件中的 <code>post_asset_folder</code> 选项的值设置为 true，创建文章时，将同时在 <code>source/_post</code> 文件夹中生成一个与 title 同名的文件夹，我们只需将图片放进此文件夹中，然后在文章中通过 Markdown 语法进行引用即可</p>
+<p>例如，在资源文件夹（就是那个与 title 同名的文件夹）中添加图片 example.PNG，则可以在对应的文章中使用语句添加图片</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![示例图片](title/example.PNG &quot;示例图片&quot;)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>文章展示问题，在利用 Hexo 框架搭建的博客网站中，首页会显示文章的内容，且默认显示文章的全部内容</p>
+<p>如果当文章太长的时候就会显得十分冗余，所以我们有必要对其进行精简</p>
+<p>这时，我们只需在文章中使用 `` 标志即可，表示只会显示标志前面的内容</p>
+</li>
+<li><p>文章的模板设置和头部设置，类似这种的，官网上可查看更多的意思：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">title: Title</span><br><span class="line">date: YYYY-MM-DD HH:MM:SS</span><br><span class="line">tags: [tag1, tag2, ...]</span><br><span class="line">categories: category</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</li>
+</ul>
 
         </div>
         
